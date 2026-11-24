@@ -34,17 +34,11 @@ The output should be `Python 3.14.5`. On macOS/Linux you may need to use `python
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone [<your-repo-url>](https://github.com/LazyCoder64858/DiscreteMathFinalProject)
 cd fuzzy_traffic
 ```
 
-### 2. Create a virtual environment
-
-```bash
-python -m venv venv
-```
-
-### 3. Activate the virtual environment
+### 2. Activate the virtual environment
 
 | OS / Shell          | Command                          |
 | ------------------- | -------------------------------- |
@@ -57,13 +51,13 @@ When activated, `(venv)` appears at the start of your terminal prompt.
 > **PowerShell note:** if activation is blocked by an execution policy error, run
 > `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` once, then try again.
 
-### 4. Install dependencies
+### 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 5. Verify the installation
+### 4. Verify the installation
 
 ```bash
 python check _setup.py
