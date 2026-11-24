@@ -39,7 +39,13 @@ git clone https://github.com/LazyCoder64858/DiscreteMathFinalProject
 cd fuzzy_traffic
 ```
 
-### 2. Activate the virtual environment
+### 2. Create a virtual environment
+
+```bash
+python -m venv venv
+```
+
+### 3. Activate the virtual environment
 
 | OS / Shell          | Command                          |
 | ------------------- | -------------------------------- |
@@ -52,13 +58,13 @@ When activated, `(venv)` appears at the start of your terminal prompt.
 > **PowerShell note:** if activation is blocked by an execution policy error, run
 > `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` once, then try again.
 
-### 3. Install dependencies
+### 4. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Verify the installation
+### 5. Verify the installation
 
 ```bash
 python check _setup.py
