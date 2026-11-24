@@ -34,6 +34,7 @@ The output should be `Python 3.14.5`. On macOS/Linux you may need to use `python
 ### 1. Clone the repository
 
 ```bash
+mkdir fuzzy_traffic
 git clone https://github.com/LazyCoder64858/DiscreteMathFinalProject
 cd fuzzy_traffic
 ```
