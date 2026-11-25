@@ -13,16 +13,28 @@ traffic conditions, rather than only for exact categories.
 """
 
 from plots import plot_memberships, plot_surface
-from fuzzy_system import FuzzyTrafficLight;
+from fuzzy_system import FuzzyTrafficLight, DENSITY_MAX, WAIT_MAX;
 
 # Get inputs
 d = float(input("Traffic density (0-60 cars/min): "))
 w = float(input("Waiting time (0-120 s): "))
 
+if d > DENSITY_MAX:
+	print("[WARNING] Traffic density is greater than 120, so it has been clamped to 120")
+
+if d < 0:
+	print("[WARNING] Traffic density is less than 0, so it has been clamped to 0")
+
+if w > WAIT_MAX:
+	print("[WARNING] Wait Time is greater than 60, so it has been clamped to 60")
+
+if w < 0:
+	print("[WARNING] Wait Time is less than 0, so it has been clamped to 0")
+
 fuzzy_light = FuzzyTrafficLight()
 
 # Print green light duration to 1dp
-print(f"Green light duration: {fuzzy_light.compute(d, w):.1f} seconds")
+print(f"\nGreen light duration: {fuzzy_light.compute(d, w):.1f} seconds")
 
 plot_memberships();
 plot_surface();
