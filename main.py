@@ -37,4 +37,3 @@ fuzzy_light = FuzzyTrafficLight()
 print(f"\nGreen light duration: {fuzzy_light.compute(d, w):.1f} seconds")
 
 plot_memberships();
-plot_surface();
