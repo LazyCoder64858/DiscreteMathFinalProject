@@ -24,22 +24,3 @@ def plot_memberships():
     fuzzy_light.green.view();
     plt.show();
 
-def plot_surface():
-    """View the resulting surface of the fuzzy traffic light control system."""
-    d = np.arange(0, fuzzy_system.DENSITY_MAX + 1, 3);
-    w = np.arange(0, fuzzy_system.WAIT_MAX + 1, 6);
-    D, W = np.meshgrid(d, w);
-    G = np.zeros_like(D, dtype=float);
-
-    for i in range(D.shape[0]):
-        for j in range(D.shape[1]):
-            G[i, j] = fuzzy_light.compute(D[i, j], W[i, j]);
-
-    fig = plt.figure();
-    ax = fig.add_subplot(111, projection='3d');
-    ax.plot_surface(D, W, G, cmap='viridis');
-    ax.set_xlabel('Traffic density (cars/min)');
-    ax.set_ylabel('Waiting time (s)');
-    ax.set_zlabel('Green Light Duration (s)');
-    ax.set_title('Fuzzy traffic light control surface');
-    plt.show();

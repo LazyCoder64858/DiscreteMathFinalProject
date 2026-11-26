@@ -12,7 +12,7 @@ aggregation determine the final duration. This makes the system useful for gradu
 traffic conditions, rather than only for exact categories.
 """
 
-from plots import plot_memberships, plot_surface
+from plots import plot_memberships;
 from fuzzy_system import FuzzyTrafficLight, DENSITY_MAX, WAIT_MAX;
 
 # Get inputs
@@ -37,4 +37,3 @@ fuzzy_light = FuzzyTrafficLight()
 print(f"\nGreen light duration: {fuzzy_light.compute(d, w):.1f} seconds")
 
 plot_memberships();
-plot_surface();
